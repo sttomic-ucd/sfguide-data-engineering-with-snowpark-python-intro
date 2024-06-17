@@ -4,7 +4,6 @@ import snowflake.snowpark.functions as F
 def table_exists(session, schema='', name=''):
     exists = session.sql("SELECT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '{}' AND TABLE_NAME = '{}') AS TABLE_EXISTS".format(schema, name)).collect()[0]['TABLE_EXISTS']
     return exists
-
 def main(session: Session) -> str:
     _ = session.sql('ALTER WAREHOUSE HOL_WH SET WAREHOUSE_SIZE = XLARGE WAIT_FOR_COMPLETION = TRUE').collect()
     schema_name = "HOL_SCHEMA"
