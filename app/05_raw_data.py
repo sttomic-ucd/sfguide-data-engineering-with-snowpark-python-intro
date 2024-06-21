@@ -9,6 +9,7 @@ import time
 from snowflake.snowpark import Session
 
 
+
 POS_TABLES = ['country', 'franchise', 'location', 'menu', 'truck', 'order_header', 'order_detail']
 CUSTOMER_TABLES = ['customer_loyalty']
 TABLE_DICT = {
@@ -68,4 +69,5 @@ if __name__ == "__main__":
     # Create a local Snowpark session
     with Session.builder.getOrCreate() as session:
         load_all_raw_tables(session)
-        validate_raw_tables(session)
+        # validate_raw_tables(session)
+        
