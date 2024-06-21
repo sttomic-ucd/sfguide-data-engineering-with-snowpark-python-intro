@@ -29,4 +29,20 @@ for (directory_path, directory_names, file_names) in os.walk(root_directory):
         continue
     print(f"Found Snowflake project in folder {directory_path}")
 
+    # Read the project config
+    project_settings = {}
+    with open(f"{directory_path}/{snowflake_project_config_filename}", "r") as yamlfile:
+        project_settings = yaml.load(yamlfile, Loader=yaml.FullLoader)
+
+    # Confirm that this is a Snowpark project
+    if 'snowpark' not in project_settings:
+        print(f"Skipping non Snowpark project in folder {base_name}")
+        continue
+
+    # Finally deploy the Snowpark project with the snowcli tool
+    print(f"Found Snowflake Snowpark project '{project_settings['snowpark']['project_name']}' in folder {base_name}")
+    print(f"Calling snowcli to deploy the project")
+    os.chdir(f"{directory_path}")
+
+    
 print("hello world!")
