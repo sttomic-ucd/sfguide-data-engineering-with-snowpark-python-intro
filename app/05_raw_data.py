@@ -58,6 +58,7 @@ def validate_raw_tables(session):
     for tname in POS_TABLES:
         print('{}: \n\t{}\n'.format(tname, session.table('RAW_POS.{}'.format(tname)).columns))
 
+
     for tname in CUSTOMER_TABLES:
         print('{}: \n\t{}\n'.format(tname, session.table('RAW_CUSTOMER.{}'.format(tname)).columns))
 
