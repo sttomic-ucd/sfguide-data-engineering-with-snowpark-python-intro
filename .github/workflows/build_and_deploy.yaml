@@ -46,4 +46,4 @@ jobs:
 
       - name: Deploy Snowpark apps
         # run: python deploy_snowpark_apps.py $GITHUB_WORKSPACE
-        run: python test.py
+        run: python test.py $GITHUB_WORKSPACE
