@@ -33,7 +33,7 @@ jobs:
           SNOWSQL_PWD: ${{ secrets.SNOWSQL_PWD }}
           SNOWSQL_ROLE: ${{ secrets.SNOWSQL_ROLE }}
           SNOWSQL_WAREHOUSE: ${{ secrets.SNOWSQL_WAREHOUSE }}
-          SNOWSQL_DATABASE: ${{ secrets.SNOWSQL_DATABASE }}
+          SNOWFLAKE_DATABASE: ${{ secrets.SNOWSQL_DATABASE }}
         run: |
           cd $GITHUB_WORKSPACE
           echo "[connections.dev]" > config
