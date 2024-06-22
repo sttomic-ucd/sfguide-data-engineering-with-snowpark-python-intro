@@ -49,7 +49,7 @@ for (directory_path, directory_names, file_names) in os.walk(root_directory):
     # # os.system(f"snow snowpark deploy --replace --temporary-connection --account $SNOWFLAKE_ACCOUNT --user $SNOWFLAKE_USER --role $SNOWFLAKE_ROLE --warehouse $SNOWFLAKE_WAREHOUSE --database HOL_DB")
     # os.system(f"snow snowpark deploy --")
     os.system("ls -l")
-    os.system("cat config.toml | grep account")
+    os.system("cat config.toml")
     os.system('snow connection set-default "default"')
     os.system(f'snow --config-file="config.toml" --connection="default" connection test ')
 
