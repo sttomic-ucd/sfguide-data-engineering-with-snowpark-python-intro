@@ -38,7 +38,7 @@ jobs:
           cd $GITHUB_WORKSPACE
           echo '[connections]' > config.toml
           echo '[connections.default]' >> config.toml
-          echo 'account = "$SNOWSQL_ACCOUNT"' >> config.toml
+          echo 'account = "$secrets.SNOWSQL_ACCOUNT"' >> config.toml
           echo 'user = "$SNOWSQL_USER"' >> config.toml
           echo 'password = "$SNOWSQL_PWD"' >> config.toml
           echo 'role = "$SNOWSQL_ROLE"' >> config.toml
