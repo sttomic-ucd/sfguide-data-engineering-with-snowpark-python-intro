@@ -51,7 +51,7 @@ for (directory_path, directory_names, file_names) in os.walk(root_directory):
     os.system("ls -l")
     os.system("cat config.toml")
     os.system('snow connection set-default "default"')
-    os.system(f'snow --config-file="config.toml" --connection="default" connection test ')
+    os.system(f'snow --config-file="config.toml" connection test --connection="default" ')
 
 
 
