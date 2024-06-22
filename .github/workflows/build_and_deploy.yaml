@@ -44,6 +44,8 @@ jobs:
           echo 'role = "$SNOWSQL_ROLE"' >> config.toml
           echo 'warehouse = "$SNOWSQL_WAREHOUSE"' >> config.toml
           echo 'database = "$SNOWSQL_DATABASE"' >> config.toml
+          chown $USER "config.toml"
+          chmod 0600 "config.toml"
 
       - name: Deploy Snowpark apps
         # run: python deploy_snowpark_apps.py $GITHUB_WORKSPACE
