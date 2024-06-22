@@ -31,8 +31,8 @@ jobs:
           SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWSQL_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SNOWSQL_USER }}
           SNOWFLAKE_PWD: ${{ secrets.SNOWSQL_PWD }}
-          SNOWSQL_ROLE: ${{ secrets.SNOWSQL_ROLE }}
-          SNOWSQL_WAREHOUSE: ${{ secrets.SNOWSQL_WAREHOUSE }}
+          SNOWFLAKE_ROLE: ${{ secrets.SNOWSQL_ROLE }}
+          SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWSQL_WAREHOUSE }}
           SNOWFLAKE_DATABASE: ${{ secrets.SNOWSQL_DATABASE }}
         run: |
           cd $GITHUB_WORKSPACE
