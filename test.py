@@ -50,8 +50,8 @@ for (directory_path, directory_names, file_names) in os.walk(root_directory):
     # os.system(f"snow snowpark deploy --")
     os.system("ls -l")
     os.system("cat config.toml | grep account")
-    os.system('snow connection set-default "connections.default"')
-    os.system(f'snow connection test --config-file="config.toml" --connection="default"')
+    os.system('snow connection set-default "default"')
+    os.system(f'snow --config-file="config.toml" --connection="default" connection test ')
 
 
 
