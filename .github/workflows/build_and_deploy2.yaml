@@ -33,5 +33,5 @@ jobs:
           run: |
            snow --version
            snow connection test
-           snow snowpark build --allow-shared-libraries --debug
+           snow snowpark build --allow-shared-libraries
           #  snow snowpark deploy
