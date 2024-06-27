@@ -34,7 +34,7 @@ def main(session: Session) -> str:
                             F.round(F.col("AVG_PRECIPITATION_IN"), 2).alias("AVG_PRECIPITATION_INCHES"), \
                         )
 
-    session.use_schema(schema_name)
+    # session.use_schema(schema_name)
     # If the table doesn't exist then create it
     if not table_exists(session, schema=schema_name, name=table_name):
         final_agg.write.mode("overwrite").save_as_table(table_name)
