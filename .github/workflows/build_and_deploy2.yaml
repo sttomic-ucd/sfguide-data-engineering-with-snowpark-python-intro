@@ -34,4 +34,4 @@ jobs:
            snow --version
            snow connection test
            snow snowpark build
-          #  snow snowpark deploy
+           snow snowpark deploy
