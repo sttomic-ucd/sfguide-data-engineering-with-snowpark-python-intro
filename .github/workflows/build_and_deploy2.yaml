@@ -31,7 +31,7 @@ jobs:
           # Use the CLI
         - name: Deploy Snowpark apps
           run: |
-           cat ${{ secrets.SNOWSQL_RSAKEY }} > rsa_key.p8
+           cat '${{ secrets.SNOWSQL_RSAKEY }}' > rsa_key.p8
            snow --version
            snow connection test
            snow snowpark build
