@@ -5,7 +5,7 @@ snowpark:
   src: "app/"
   
   procedures:
-    - name: "sp_test"
+    - name: "sp_test2"
       database: "hol_db"
       schema: "hol_schema"
       handler: "test_func.main"
