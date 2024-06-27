@@ -5,20 +5,20 @@ snowpark:
   src: "app/"
   
   procedures:
-    - name: "sp_test"
-      database: "hol_db"
-      schema: "hol_schema"
-      handler: "test.main"
-      runtime: "3.10"
-      signature: ""
-      returns: string
-    # - name: "load_daily_city_metrics_sp"
+    # - name: "sp_test"
     #   database: "hol_db"
     #   schema: "hol_schema"
-    #   handler: "06_load_daily_city_metrics.main"
+    #   handler: "test.main"
     #   runtime: "3.10"
     #   signature: ""
     #   returns: string
+    - name: "load_daily_city_metrics_sp"
+      database: "hol_db"
+      schema: "hol_schema"
+      handler: "06_load_daily_city_metrics.main"
+      runtime: "3.10"
+      signature: ""
+      returns: string
     # - name: "load_raw_data_sp"
     #   database: "hol_db"
     #   schema: "hol_schema"
