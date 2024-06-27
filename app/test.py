@@ -1,4 +1,5 @@
+from snowflake.snowpark import Session
 
 
-def main() -> str:
+def main(session: Session) -> str:
     return "OK"
