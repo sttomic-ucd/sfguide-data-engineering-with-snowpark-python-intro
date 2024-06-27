@@ -33,6 +33,5 @@ jobs:
           run: |
            snow --version
            snow connection test
-           pip install -r requirements.txt
-           snow snowpark build --allow-shared-libraries --ignore-anaconda
+           snow snowpark build
           #  snow snowpark deploy
