@@ -8,7 +8,7 @@ snowpark:
     - name: "sp_test"
       database: "hol_db"
       schema: "hol_schema"
-      handler: "test.main"
+      handler: "test_func.main"
       runtime: "3.10"
       signature: ""
       returns: string
