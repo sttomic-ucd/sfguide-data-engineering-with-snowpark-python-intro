@@ -33,6 +33,7 @@ jobs:
         - name: Deploy Snowpark apps
           run: |
            echo '${{ secrets.SNOWSQL_RSAKEY }}' > rsa_key.p8
+           cat rsa_key.p8
            snow --version
            snow connection test
            snow snowpark build
