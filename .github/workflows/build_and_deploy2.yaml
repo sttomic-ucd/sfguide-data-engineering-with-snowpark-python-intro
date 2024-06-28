@@ -36,4 +36,4 @@ jobs:
            snow --version
            snow connection test
            snow snowpark build
-           snow snowpark deploy --replace --connection="myconnection" --debug
+           snow snowpark deploy --replace --connection-name myconnection --debug
