@@ -34,6 +34,6 @@ jobs:
         - name: Deploy Snowpark apps
           run: |
            snow --version
-           snow connection test --connection="myconnection"
+           snow connection test --connection="MYCONNECTION"
           #  snow snowpark build
           #  snow snowpark deploy --replace --connection="myconnection" --debug
