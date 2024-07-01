@@ -39,4 +39,5 @@ jobs:
            snow --version
            snow connection test --connection="myconnection"
            snow snowpark build
-           snow snowpark deploy --replace --connection="myconnection" --authenticator="SNOWFLAKE_JWT" --debug --private-key-path="rsa_key.p8"
+           snow snowpark deploy --replace --connection="myconnection" --authenticator="SNOWFLAKE_JWT" --debug
+          #  snow snowpark deploy --replace --connection="myconnection" --authenticator="SNOWFLAKE_JWT" --debug --private-key-path="rsa_key.p8"
