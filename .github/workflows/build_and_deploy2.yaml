@@ -35,9 +35,7 @@ jobs:
           # Use the CLI
         - name: Deploy Snowpark apps
           run: |
-           echo "$RSA_KEY" > rsa_key.p8
            snow --version
            snow connection test --connection="myconnection"
            snow snowpark build
            snow snowpark deploy --replace --connection="myconnection" --authenticator="SNOWFLAKE_JWT" --debug
-          #  snow snowpark deploy --replace --connection="myconnection" --authenticator="SNOWFLAKE_JWT" --debug --private-key-path="rsa_key.p8"
